@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0a0a1a">
+  <title>Ball Sort Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="hud-bar">
+    <div class="hud-left">
+      <span class="hud-title">🔵 BALL SORT</span>
+    </div>
+    <div class="hud-right">
+      <span class="hud-item" onclick="if(window.ShopUI)ShopUI.showTab('upgrades')"><span class="lvl-icon">⚡ Lv.<span id="hud-level">1</span></span></span>
+      <span class="hud-item"><span class="coin-icon">🪙</span><span id="hud-coins">100</span></span>
+      <span class="hud-item"><span class="gem-icon">💎</span><span id="hud-gems">0</span></span>
+    </div>
+  </div>
+
+  <div id="game-container">
+    <div id="score-display">
+      <div class="score-label">Score</div>
+      <div class="score-value" id="score-value">0</div>
+    </div>
+
+    <div id="level-display">Lvl <span id="level-num">1</span></div>
+    <div id="moves-display">Moves: <span id="moves-num">0</span></div>
+    <div id="timer-display">⏱️ <span id="timer-value">0</span>s</div>
+
+    <!-- Tube Container for balls -->
+    <div id="tube-container"></div>
+
+    <div id="button-bar">
+      <button class="game-btn btn-primary" id="new-level-btn">▶ New Level</button>
+      <button class="game-btn btn-hint" id="hint-btn">💡 Hint</button>
+      <button class="game-btn btn-undo" id="undo-btn">↩ Undo</button>
+      <button class="game-btn btn-reset" id="reset-btn">🔄 Reset</button>
+      <button class="game-btn btn-shop" id="button-shop">🛒 Shop</button>
+      <button class="game-btn btn-powerup" id="button-ach">🏆</button>
+    </div>
+  </div>
+
+  <div id="game-over-overlay">
+    <div class="game-over-box">
+      <h2>Level Complete! 🎉</h2>
+      <div class="final-score" id="final-score">0</div>
+      <div class="stat-row">
+        <span>Moves: <strong id="go-moves">0</strong></span>
+        <span>Time: <strong id="go-time">0s</strong></span>
+      </div>
+      <div class="btn-group">
+        <button class="game-btn btn-primary" onclick="startLevel()">▶ Next Level</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="notification"></div>
+  <script src="visuals.js"></script>
+  <script src="progression.js"></script>
+  <script src="shop.js"></script>
+  <script src="ads-manager.js"></script>
+  <script src="challenges-system.js"></script>
+  <script src="store-rotator.js"></script>
+  <script src="retention-system.js"></script>
+  <script src="collectibles-system.js"></script>
+  <script src="tutorial-system.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
